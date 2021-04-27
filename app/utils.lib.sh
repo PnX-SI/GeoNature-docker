@@ -61,7 +61,7 @@ function wait_for_restart
     fi
     sleep_time=$3
     if [[ "x$3" = "x" ]]; then
-        sleep_time=5s
+        sleep_time=1s
     fi
 
     wait-for-it -t ${timeout} ${service_connection}
@@ -152,3 +152,7 @@ function wait_for_file
     fi
     while [ ! -f $file_to_wait ]; do sleep $repeat_timer; echo "${wait_message}"; done
 }
+
+
+
+
